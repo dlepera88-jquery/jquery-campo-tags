@@ -1,0 +1,20 @@
+// Configurações ------------------------------------------------------------ //
+$seletor: '.digitar-tags';
+
+
+// Estilo ------------------------------------------------------------------- //
+#{$seletor} {
+    // Visual
+    display: block;
+
+    // Tamanho
+    line-height: $tm-campo - 5;
+
+    // Flex
+    order: 1;
+
+    &:focus, &:active {
+        // Visual
+        outline: none;
+    }
+}

@@ -1,0 +1,33 @@
+// Configurações ------------------------------------------------------------ //
+$plugin: '__jQuery-campoTags';
+$tema: 'padrao';
+$seletor_tema: '.#{$plugin}.#{$tema}';
+$borda-campo: 1px solid #EFEFEF;
+$tm-campo: 32px;
+$cor-tag: #45a163;
+
+
+// Estilo ------------------------------------------------------------------- //
+#{$seletor_tema} {
+    // Visual
+    display: inline-flex;
+    border-radius: 3px;
+    border: $borda-campo;
+    box-sizing: border-box;
+
+    // Flex
+    flex-direction: column;
+
+    // Margens
+    padding: 5px;
+
+    // Tamanho
+    width: 300px;
+    max-width: 100%;
+    min-height: $tm-campo;
+
+    // Texto
+    font: 14px sans-serif;
+
+    @import 'componentes/*';
+}

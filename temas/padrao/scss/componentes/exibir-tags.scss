@@ -1,0 +1,66 @@
+// Configurações ------------------------------------------------------------ //
+$seletor: '.exibir-tags';
+
+
+// Estilo ------------------------------------------------------------------- //
+#{$seletor} {
+    // Visual
+    display: block;
+    border-top: $borda-campo;
+
+    // Flex
+    order: 2;
+
+    // Margens
+    padding-top: 5px;
+
+    > .tag {
+        // Visual
+        display: inline-block;
+        background: lighten($cor-tag, 42%);
+        border-radius: 3px;
+
+        // Texto
+        color: $cor-tag;
+
+        // Margens
+        padding: 3px 6px 3px 9px;
+        margin-bottom: 3px;
+
+        // Transições
+        transition: background .5s;
+
+        &:not(:last-child) {
+            // Margens
+            margin-right: 5px;
+        }
+
+        &::after {
+            // Conteúdo
+            content: 'x';
+
+            // Visual
+            display: inline-block;
+            border-left: 1px solid $cor-tag;
+            opacity: .5;
+
+            // Margens
+            margin-left: 5px;
+            padding-left: 5px;
+
+            // Transições
+            transition: opacity .5s;
+        }
+
+        &:hover {
+            // Visual
+            background: lighten($cor-tag, 38%);
+
+            &::after {
+                // Visual
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+}
