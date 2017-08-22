@@ -156,7 +156,7 @@ if (jQuery === undefined) {
 
         return this.each(function () {
             // Ocultar o campo e convertê-lo em um campo oculto
-            var $this = $(this).css('opacity', 0).attr('type', 'hidden');
+            var $this = $(this).css('opacity', 0).prop('required', false).attr('type', 'hidden');
 
             // Criar uma DIV que irá envolver o campo por completo e incluir abaixo
             // do campo
